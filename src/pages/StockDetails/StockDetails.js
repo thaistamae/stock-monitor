@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 export default function StockDetails() {
-  const { stockSymbol } = useParams();
+  const { ticker } = useParams();
   const [stockList, setStockList] = useState([]);
 
   const options = {
@@ -28,10 +28,25 @@ export default function StockDetails() {
   }, []);
 
   const filteredStock = stockList.filter((stock) => {
-    return stock.symbol === `${stockSymbol}`;
+    return stock.symbol === `${ticker}`;
   });
 
   console.log(filteredStock);
 
-  return <></>;
+  return <>
+       <div>
+        
+        {filteredStock.map((stock) => {
+          return (
+          <section key={stock.symbol}>
+            <h1>{stock.longName}</h1>
+              <p>{stock.symbol}</p>
+              <p>{stock.regularMarketPrice}</p>
+              <p>{stock.regularMarketChangePercent}</p>
+              <p>{stock.quoteSourceName}</p>
+          </section>
+      )})}
+    
+    </div>
+  </>;
 }

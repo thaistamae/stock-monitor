@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export function StockDetails() {
+export default function StockDetails() {
   const { stockSymbol } = useParams();
   const [stockList, setStockList] = useState([]);
 
@@ -12,7 +12,7 @@ export function StockDetails() {
     params: { region: "US", symbols: "AAPL,BUD,DIS,MSFT,NKE" },
     headers: {
       "X-RapidAPI-Host": "yh-finance.p.rapidapi.com",
-      "X-RapidAPI-Key": "",
+      "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
     },
   };
 

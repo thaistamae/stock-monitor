@@ -1,6 +1,6 @@
 
 # Sobre o Projeto
-O monitor de ações foi criado para o acompanhamento das principais ações dos Estados Unidos.
+O monitor de ações foi criado para o acompanhamento das principais ações do mundo.
 
 Ele permite o acompanhamento dos preços em tempo real e as atuais variações comparadas ao dia anterior.
   

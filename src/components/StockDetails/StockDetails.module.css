@@ -1,0 +1,54 @@
+.general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3d3e42;
+}
+
+.organize {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 700px;
+  margin-top: 50px;
+}
+
+.title {
+  padding: 15px;
+  font-size: 24px;
+  border-bottom: 1px solid #cecac4;
+}
+
+.lines {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 20px;
+  border-bottom: 1px solid #cecac4;
+}
+
+.lines2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.currency {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stockChangePositive {
+  font-size: 20px;
+  padding: 5px;
+  color: green;
+}
+
+.stockChangeNegative {
+  font-size: 20px;
+  padding: 5px;
+  color: red;
+}

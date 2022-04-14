@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import styles from "./StockDetails.module.css";
 
 export default function StockDetails() {
   const { ticker } = useParams();
@@ -35,19 +36,47 @@ export default function StockDetails() {
     return stock.symbol === `${ticker}`;
   });
 
-  console.log(filteredStock);
-
   return (
     <>
-      <div>
+      <div className={styles.general}>
         {filteredStock.map((stock) => {
           return (
-            <section key={stock.symbol}>
-              <h1>{stock.longName}</h1>
-              <p>{stock.symbol}</p>
-              <p>{stock.regularMarketPrice}</p>
-              <p>{stock.regularMarketChangePercent}</p>
-              <p>{stock.quoteSourceName}</p>
+            <section key={stock.symbol} className={styles.organize}>
+              <h1 className={styles.title}>{stock.longName}</h1>
+              <div className={styles.lines}>
+                <p className={styles.left}>Ticker</p>
+                <p className={styles.right}>{stock.symbol}</p>
+              </div>
+              <div className={styles.lines}>
+                <p>Bolsa de Valores</p>
+                <p>{stock.fullExchangeName}</p>
+              </div>
+              <div className={styles.lines}>
+                <p>
+                  Preço Atual <span className={styles.currency}>(em USD)</span>
+                </p>
+                <p>
+                  {(Math.round(stock.regularMarketPrice * 100) / 100).toFixed(
+                    2
+                  )}
+                </p>
+              </div>
+              <div className={styles.lines2}>
+                <p>Variação Atual</p>
+                <p
+                  className={
+                    stock.regularMarketChangePercent > 0
+                      ? styles.stockChangePositive
+                      : styles.stockChangeNegative
+                  }
+                >
+                  {(stock.regularMarketChangePercent > 0 ? "+" : "") +
+                    (
+                      Math.round(stock.regularMarketChangePercent * 100) / 100
+                    ).toFixed(2) +
+                    "%"}
+                </p>
+              </div>
             </section>
           );
         })}

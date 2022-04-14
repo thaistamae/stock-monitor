@@ -1,5 +1,6 @@
 import styles from "./StockDetailsNavbar.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logoGray from "../../assets/logo3.png";
 
 export default function MonitorNavbar() {
@@ -24,7 +25,9 @@ export default function MonitorNavbar() {
       <nav className={navbar ? styles.fixed : styles.navbar}>
         <div className={styles.navbarContainer}>
           <div className={styles.itemLeft}>
-            {<img src={logoGray} className={styles.logoGray} alt="" />}
+            <Link to="/">
+              {<img src={logoGray} className={styles.logoGray} alt="" />}
+            </Link>
           </div>
         </div>
       </nav>

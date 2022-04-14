@@ -337,23 +337,23 @@ button:hover {
   }
   
   button {
-    height: 30px;
-    width: 50px;
+    height: 25px;
+    width: 40px;
     border-radius: 10px;
     border: none;
     background-color: #e5803d;
     color: white;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
   }
   
   button:hover {
-    height: 30px;
-    width: 50px;
+    height: 25px;
+    width: 40px;
     border-radius: 10px;
     border: none;
     background-color: #ad4200;
     color: white;
-    font-size: 14px; 
+    font-size: 12px; 
   }
 }

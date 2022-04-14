@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@100;200;300;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.title{
+    width: 100%;
+    height: 12vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    position: absolute;
+    height: 70px;
+    transform: translate(-50%, -50);
+}
+
+.navbar{
+    width: 100%;
+    background-color: #CECAC4;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 100;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 22px;
+
+}
+
+.navbarContainer{
+    width: 70%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.itemLeft{
+    float: left;
+    cursor: pointer;
+}
+
+.itemLeft:hover{
+    background-color: gray;
+    color:white;
+}
+
+.itemRight{
+    float: right;
+    cursor: pointer;
+}
+
+.itemRight:hover{
+    background-color: gray;
+    color:white;
+}
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+    background-color: #CECAC4;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 100;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 22px;
+
+}

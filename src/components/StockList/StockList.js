@@ -13,7 +13,7 @@ export function StockList() {
     url: "https://yh-finance.p.rapidapi.com/market/v2/get-quotes",
     params: {
       region: "US",
-      symbols: "AAPL,BUD,DIS,MSFT,NKE,BKNG,V,KO,NSRGY,RACE,TDNT",
+      symbols: "AAPL,BUD,DIS,MSFT,NKE,BKNG,V,KO,NSRGY,RACE,TDNT,STZ,MA,ADBE,ILMN,CL,HD",
     },
     headers: {
       "X-RapidAPI-Host": "yh-finance.p.rapidapi.com",

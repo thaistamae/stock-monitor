@@ -9,7 +9,11 @@ export default function StockDetails() {
   const options = {
     method: "GET",
     url: "https://yh-finance.p.rapidapi.com/market/v2/get-quotes",
-    params: { region: "US", symbols: "AAPL,BUD,DIS,MSFT,NKE" },
+    params: {
+      region: "US",
+      symbols:
+        "AAPL,BUD,DIS,MSFT,NKE,BKNG,V,KO,NSRGY,RACE,TDNT,STZ,MA,ADBE,ILMN,CL,HD,MCO",
+    },
     headers: {
       "X-RapidAPI-Host": "yh-finance.p.rapidapi.com",
       "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
@@ -33,20 +37,21 @@ export default function StockDetails() {
 
   console.log(filteredStock);
 
-  return <>
-       <div>
-        
+  return (
+    <>
+      <div>
         {filteredStock.map((stock) => {
           return (
-          <section key={stock.symbol}>
-            <h1>{stock.longName}</h1>
+            <section key={stock.symbol}>
+              <h1>{stock.longName}</h1>
               <p>{stock.symbol}</p>
               <p>{stock.regularMarketPrice}</p>
               <p>{stock.regularMarketChangePercent}</p>
               <p>{stock.quoteSourceName}</p>
-          </section>
-      )})}
-    
-    </div>
-  </>;
+            </section>
+          );
+        })}
+      </div>
+    </>
+  );
 }

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import StockDetailsNavbar from "../../components/StockDetailsNavbar/StockDetailsNavbar"
 
 export default function StockDetails() {
   const { ticker } = useParams();
@@ -39,6 +40,7 @@ export default function StockDetails() {
 
   return (
     <>
+    <StockDetailsNavbar/>
       <div>
         {filteredStock.map((stock) => {
           return (

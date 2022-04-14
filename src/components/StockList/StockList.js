@@ -5,7 +5,6 @@ import styles from "./StockList.module.css";
 
 export function StockList() {
   const [stockList, setStockList] = useState([]);
-  const [fixedTitle, setfixedTitle] = useState(false);
 
   const options = {
     method: "GET",
@@ -36,9 +35,21 @@ export function StockList() {
     <>
       <div>
         <div className={styles.organizeTitle}>
-          <div className={styles.column1}> <p className={styles.titleEnterprise}>Empresa </p></div>
-          <div className={styles.column2}> <p className={styles.titleValues}> Preço Atual <span className={styles.currency}>em USD</span></p> </div>
-          <div className={styles.column2}> <p className={styles.titleValues}> Variação</p>   </div>
+          <div className={styles.column1}>
+            {" "}
+            <p className={styles.titleEnterprise}>Empresa </p>
+          </div>
+          <div className={styles.column2}>
+            {" "}
+            <p className={styles.titleValues}>
+              {" "}
+              Preço Atual <span className={styles.currency}>em USD</span>
+            </p>{" "}
+          </div>
+          <div className={styles.column2}>
+            {" "}
+            <p className={styles.titleValues}> Variação</p>{" "}
+          </div>
           <div className={styles.column3}> </div>
         </div>
         {stockList.map((stock) => (
@@ -68,7 +79,9 @@ export function StockList() {
               </p>
             </div>
             <Link className={styles.column3} to={`/${stock.symbol}`}>
-              <button><p className={styles.buttonText}>Detalhes</p></button>
+              <button>
+                <p className={styles.buttonText}>Detalhes</p>
+              </button>
             </Link>
           </div>
         ))}

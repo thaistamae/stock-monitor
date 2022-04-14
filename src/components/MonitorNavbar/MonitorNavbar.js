@@ -1,9 +1,8 @@
-import styles from "./Navbar.module.css";
+import styles from "./MonitorNavbar.module.css";
 import { useState } from "react";
-import logoBlack from "../../assets/logo4.png";
 import logoGray from "../../assets/logo3.png";
 
-export default function Navbar() {
+export default function MonitorNavbar() {
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {

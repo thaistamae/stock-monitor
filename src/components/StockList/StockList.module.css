@@ -1,106 +1,114 @@
-.organizeTitle{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-top: 10px;
-    border-bottom: 1px solid #3d3e42;
-    padding: 10px;
-    padding-bottom: 5px;
+.organizeTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 10px;
+  border-bottom: 1px solid #3d3e42;
+  padding: 10px;
+  padding-bottom: 5px;
 }
 
-.organize{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 250px;
-    margin-right: 250px;
-    border-bottom: 1px solid #CECAC4;
-    padding: 15px;
+.organize {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 250px;
+  margin-right: 250px;
+  border-bottom: 1px solid #cecac4;
+  padding: 15px;
 }
 
-.column1{
-    width: 700px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;    
+.column1 {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.column2{    
-    width: 150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.column2 {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.column3{
-    width: 150px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.column3 {
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
 }
 
-.titleEnterprise{
-    font-size: 16px;
-    padding-left: 13px;
-    font-weight: 700;
-    color:#3d3e42;
+.titleEnterprise {
+  font-size: 16px;
+  padding-left: 13px;
+  font-weight: 700;
+  color: #3d3e42;
 }
 
-.titleValues{
-    font-size: 16px;
-    font-weight: 700;
-    color:#3d3e42;
-    line-height: 1.2;
-    text-align: center;    
+.titleValues {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3d3e42;
+  line-height: 1.2;
+  text-align: center;
 }
 
-.stockName{
-    font-size: 20px;
-    padding: 3px;
-    color: #3d3e42;
+.stockName {
+  font-size: 20px;
+  padding: 3px;
+  color: #3d3e42;
 }
 
-.currency{
-    font-size: 12px;
-    font-weight: 500;
+.currency {
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.stockPrice{
-    font-size: 20px;
-    padding: 3px;
-    font-weight: 600;
-    color: #3d3e42;
+.stockPrice {
+  font-size: 20px;
+  padding: 3px;
+  font-weight: 600;
+  color: #3d3e42;
 }
 
-.stockTicker{
-    padding: 3px;
-    color: gray;
-}   
-
-
-.stockChangePositive{
-    font-size: 20px;
-    padding: 5px;
-    color: green;
+.stockTicker {
+  padding: 3px;
+  color: gray;
 }
 
-.stockChangeNegative{
-    font-size: 20px;
-    padding: 5px;
-    color: red;
+.stockChangePositive {
+  font-size: 20px;
+  padding: 5px;
+  color: green;
 }
 
-button{
-    height: 45px;
-    width: 75px;
-    border-radius: 10px;
-    border: none;
-    background-color:#E5803D;
-    color: white;
+.stockChangeNegative {
+  font-size: 20px;
+  padding: 5px;
+  color: red;
 }
 
+button {
+  height: 45px;
+  width: 75px;
+  border-radius: 10px;
+  border: none;
+  background-color: #e5803d;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  height: 45px;
+  width: 75px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ad4200;
+  color: white;
+}

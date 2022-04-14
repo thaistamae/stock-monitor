@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./StockList.module.css";
 
-export function StockList() {
+export default function StockList() {
   const [stockList, setStockList] = useState([]);
 
   const options = {

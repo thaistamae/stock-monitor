@@ -15,10 +15,16 @@
     justify-content: center;
 }
 
-img{
+.logoBlack{
     position: absolute;
-    height: 70px;
+    height: 50px;
     transform: translate(-50%, -50);
+    margin: 0;
+    padding: 0;
+}
+
+.logoGray{
+    height: 30px;
     margin: 0;
     padding: 0;
 }
@@ -39,26 +45,21 @@ img{
     width: 70%;
     max-width: 120rem;
     margin: 0 auto;
+
 }
 
 .itemLeft{
     float: left;
     cursor: pointer;
-}
-
-.itemLeft:hover{
-    background-color: gray;
-    color:white;
+    padding-top: 5px;
 }
 
 .itemRight{
     float: right;
     cursor: pointer;
-}
-
-.itemRight:hover{
-    background-color: gray;
-    color:white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
 }
 
 .fixed{

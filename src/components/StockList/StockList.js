@@ -33,7 +33,13 @@ export function StockList() {
 
   return (
     <>
-      <div sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+      <div>
+        <div className={styles.organizeTitle}>
+          <div className={styles.column1}> Empresa </div>
+          <div className={styles.column2}> Preço Atual </div>
+          <div className={styles.column2}> Variação </div>
+          <div className={styles.column3}> </div>
+        </div>
         {stockList.map((stock) => (
           <div className={styles.organize} key={stock.symbol}>
             <div className={styles.column1}>
@@ -53,9 +59,11 @@ export function StockList() {
                     : styles.stockChangeNegative
                 }
               >
-                {(stock.regularMarketChangePercent > 0? "+" : "") + (
-                  Math.round(stock.regularMarketChangePercent * 100) / 100
-                ).toFixed(2) + "%"}
+                {(stock.regularMarketChangePercent > 0 ? "+" : "") +
+                  (
+                    Math.round(stock.regularMarketChangePercent * 100) / 100
+                  ).toFixed(2) +
+                  "%"}
               </p>
             </div>
             <Link className={styles.column3} to={`/${stock.symbol}`}>

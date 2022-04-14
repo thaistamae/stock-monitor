@@ -1,3 +1,13 @@
+.organizeTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 250px;
+    margin-right: 250px;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
 .organize{
     display: flex;
     flex-direction: row;
@@ -33,17 +43,17 @@
 
 .stockName{
     font-size: 22px;
-    padding: 5px;
+    padding: 3px;
 }
 
 .stockPrice{
     font-size: 22px;
-    padding: 5px;
+    padding: 3px;
     font-weight: 700;
 }
 
 .stockTicker{
-    padding: 5px;
+    padding: 3px;
     color: gray;
 }   
 

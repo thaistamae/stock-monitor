@@ -19,20 +19,13 @@ export default function Navbar() {
   return (
     <>
       <header className={styles.title}>
-        <img src={logoBlack} className={styles.logoBlack} alt="" />
+        <h1 className={styles.monitor}>Monitor de Ações</h1>
       </header>
 
       <nav className={navbar ? styles.fixed : styles.navbar}>
         <div className={styles.navbarContainer}>
           <div className={styles.itemLeft}>
-            {navbar ? (
-              <img src={logoGray} className={styles.logoGray} alt="" />
-            ) : null}
-          </div>
-          <div className={styles.center}>
-            <div className={styles.itemRight}>
-              <p>Monitor de Ações</p>
-            </div>
+            {<img src={logoGray} className={styles.logoGray} alt="" />}
           </div>
         </div>
       </nav>

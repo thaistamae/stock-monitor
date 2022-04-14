@@ -2,10 +2,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     margin-left: 250px;
     margin-right: 250px;
-    border-bottom: 1px solid gray;
+    margin-top: 10px;
+    border-bottom: 1px solid #3d3e42;
     padding: 10px;
+    padding-bottom: 5px;
 }
 
 .organize{
@@ -15,7 +18,7 @@
     margin-left: 250px;
     margin-right: 250px;
     border-bottom: 1px solid #CECAC4;
-    padding: 20px;
+    padding: 15px;
 }
 
 .column1{
@@ -25,10 +28,10 @@
     flex-direction: column;    
 }
 
-.column2{
+.column2{    
     width: 150px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -41,15 +44,37 @@
     align-items: center;
 }
 
+.titleEnterprise{
+    font-size: 16px;
+    padding-left: 13px;
+    font-weight: 700;
+    color:#3d3e42;
+}
+
+.titleValues{
+    font-size: 16px;
+    font-weight: 700;
+    color:#3d3e42;
+    line-height: 1.2;
+    text-align: center;    
+}
+
 .stockName{
-    font-size: 22px;
+    font-size: 20px;
     padding: 3px;
+    color: #3d3e42;
+}
+
+.currency{
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .stockPrice{
-    font-size: 22px;
+    font-size: 20px;
     padding: 3px;
-    font-weight: 700;
+    font-weight: 600;
+    color: #3d3e42;
 }
 
 .stockTicker{
@@ -59,24 +84,23 @@
 
 
 .stockChangePositive{
-    font-size: 22px;
+    font-size: 20px;
     padding: 5px;
     color: green;
 }
 
 .stockChangeNegative{
-    font-size: 22px;
+    font-size: 20px;
     padding: 5px;
     color: red;
 }
 
 button{
-    height: 50px;
-    width: 70px;
+    height: 45px;
+    width: 75px;
     border-radius: 10px;
     border: none;
+    background-color:#E5803D;
+    color: white;
 }
 
-Link{
-    text-decoration: none;
-}

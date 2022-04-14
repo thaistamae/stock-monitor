@@ -11,9 +11,9 @@ O monitor de ações possui uma tela principal de monitoramento, onde são anali
 Para saber mais sobre determinada ação, basta clicar no botão detalhes, localizado ao lado da ação.
 
 O projeto foi desenvolvido utilizando a API Yahoo Finance, siga o passo a passo para conectar a API.
-1. Acesse o site https://rapidapi.com/apidojo/api/yh-finance/ e faça login para gerar sua API KEY.
-
-2. Inclua a API KEY gerada no arquivo .env "REACT_APP_API_KEY=API_KEY_GERADA" . 
+1. Acesse o site https://rapidapi.com/apidojo/api/yh-finance/ e faça login para gerar sua API KEY
+2. Inclua a API KEY gerada no arquivo .env "REACT_APP_API_KEY=API_KEY_GERADA"  
+3. Escreva o comando npm start no terminal do projeto para rodar o projeto localmente
 
 É possível modificar as ações que aparecem no monitor, alterando os arquivos "StockDetails.js" e "StockList.js". Após o "symbol :" inclua os tickers das ações que você gostaria de analisar.
 

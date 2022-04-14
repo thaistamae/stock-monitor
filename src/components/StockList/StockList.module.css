@@ -1,0 +1,72 @@
+.organize{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 250px;
+    margin-right: 250px;
+    border-bottom: 1px solid #CECAC4;
+    padding: 20px;
+}
+
+.column1{
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.column2{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.column3{
+    width: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.stockName{
+    font-size: 22px;
+    padding: 5px;
+}
+
+.stockPrice{
+    font-size: 22px;
+    padding: 5px;
+    font-weight: 700;
+}
+
+.stockTicker{
+    padding: 5px;
+    color: gray;
+}   
+
+
+.stockChangePositive{
+    font-size: 22px;
+    padding: 5px;
+    color: green;
+}
+
+.stockChangeNegative{
+    font-size: 22px;
+    padding: 5px;
+    color: red;
+}
+
+button{
+    height: 50px;
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+}
+
+Link{
+    text-decoration: none;
+}

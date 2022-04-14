@@ -1,9 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
+import styles from "./StockList.module.css";
 
 export function StockList() {
   const [stockList, setStockList] = useState([]);
@@ -13,7 +11,8 @@ export function StockList() {
     url: "https://yh-finance.p.rapidapi.com/market/v2/get-quotes",
     params: {
       region: "US",
-      symbols: "AAPL,BUD,DIS,MSFT,NKE,BKNG,V,KO,NSRGY,RACE,TDNT,STZ,MA,ADBE,ILMN,CL,HD",
+      symbols:
+        "AAPL,BUD,DIS,MSFT,NKE,BKNG,V,KO,NSRGY,RACE,TDNT,STZ,MA,ADBE,ILMN,CL,HD,MCO",
     },
     headers: {
       "X-RapidAPI-Host": "yh-finance.p.rapidapi.com",
@@ -34,27 +33,37 @@ export function StockList() {
 
   return (
     <>
-      <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+      <div sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
         {stockList.map((stock) => (
-          <ListItem alignItems="flex-start" key={stock.symbol}>
-            <ListItemText
-              primary={stock.longName}
-              secondary={stock.symbol}
-            ></ListItemText>
-            <ListItemText
-              primary={(
-                Math.round(stock.regularMarketPrice * 100) / 100
-              ).toFixed(2)}
-              secondary={(
-                Math.round(stock.regularMarketChangePercent * 100) / 100
-              ).toFixed(2)}
-            ></ListItemText>
-            <Link to={`/${stock.symbol}`}>
-              <button>Details</button>
+          <div className={styles.organize} key={stock.symbol}>
+            <div className={styles.column1}>
+              <p className={styles.stockName}>{stock.longName}</p>
+              <p className={styles.stockTicker}>{stock.symbol}</p>
+            </div>
+            <div className={styles.column2}>
+              <p className={styles.stockPrice}>
+                {(Math.round(stock.regularMarketPrice * 100) / 100).toFixed(2)}
+              </p>
+            </div>
+            <div className={styles.column2}>
+              <p
+                className={
+                  stock.regularMarketChangePercent > 0
+                    ? styles.stockChangePositive
+                    : styles.stockChangeNegative
+                }
+              >
+                {(stock.regularMarketChangePercent > 0? "+" : "") + (
+                  Math.round(stock.regularMarketChangePercent * 100) / 100
+                ).toFixed(2) + "%"}
+              </p>
+            </div>
+            <Link className={styles.column3} to={`/${stock.symbol}`}>
+              <button>Detalhes</button>
             </Link>
-          </ListItem>
+          </div>
         ))}
-      </List>
+      </div>
     </>
   );
 }

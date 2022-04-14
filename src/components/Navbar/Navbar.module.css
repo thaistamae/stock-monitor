@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@100;200;300;500&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
 }
 
 .title{
@@ -21,6 +19,8 @@ img{
     position: absolute;
     height: 70px;
     transform: translate(-50%, -50);
+    margin: 0;
+    padding: 0;
 }
 
 .navbar{
@@ -28,7 +28,7 @@ img{
     background-color: #CECAC4;
     color: #333;
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 500;
     height: 3rem;
     line-height: 3rem;
     font-size: 22px;
@@ -69,7 +69,7 @@ img{
     background-color: #CECAC4;
     color: #333;
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 500;
     height: 3rem;
     line-height: 3rem;
     font-size: 22px;

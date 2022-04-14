@@ -10,7 +10,7 @@ O monitor de ações possui uma tela principal de monitoramento, onde são anali
 
 Para saber mais sobre determinada ação, basta clicar no botão detalhes, localizado ao lado da ação.
 
-O projeto foi desenvolvido utilizando a API Yahoo Finance, siga o passo a passo para conectar o projeto ao banco de dados.
+O projeto foi desenvolvido utilizando a API Yahoo Finance, siga o passo a passo para conectar a API.
 1. Acesse o site https://rapidapi.com/apidojo/api/yh-finance/ e faça login para gerar sua API KEY.
 
 2. Inclua a API KEY gerada no arquivo .env "REACT_APP_API_KEY=API_KEY_GERADA" . 
